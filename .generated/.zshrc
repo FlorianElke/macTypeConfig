@@ -32,7 +32,9 @@ fi
 # Custom configuration
 # Add your custom shell configuration here
 
-export NVM_DIR="$([ -z "\${XDG_CONFIG_HOME -}" ] && printf %s "$\{HOME}/.nvm" || printf %s "$\{XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+export NVM_DIR=/Users/floran/.nvm
+[ -s /Users/floran/.nvm/nvm.sh ] && \. /Users/floran/.nvm/nvm.sh  # This loads nvm
+[ -s /Users/floran/.nvm/bash_completion ] && \. /Users/floran/.nvm/bash_completion  # This loads nvm bash_completion
+
 
 

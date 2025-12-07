@@ -1,5 +1,5 @@
 import { Configuration } from '../../.local/macType/src/types';
-import { dockSetting, trackpadSetting } from '../../.local/macType/src/managers/macos-defaults';
+import { desktopSetting, dockSetting, menuBarSetting, trackpadSetting } from '../../.local/macType/src/managers/macos-defaults';
 
 declare var __dirname: any;
 
@@ -10,12 +10,15 @@ const config: Configuration = {
       'node',
       'claude-code',
       'zsh-syntax-highlighting',
-      'mas'
+      'mas',
+      'go'
     ],
     casks: [
       '1password',
       'google-chrome',
-      'visual-studio-code'
+      'visual-studio-code',
+      'postman',
+      'discord'
     ],
   },
 
@@ -28,14 +31,15 @@ const config: Configuration = {
   macos: {
     settings: [
       trackpadSetting('TapToClick', true),
-      dockSetting('show-recents', false)
+      dockSetting('show-recents', false),
     ],
     dockApps: [
       { name: 'Visual Studio Code', position: 1 },
       { name: 'Google Chrome' },
-      { name: '1Password' }
+      { name: '1Password' },
+      { name: 'Postman' }
     ],
-    wallpaper: __dirname + '/wallpaper.jpg'
+    wallpaper: __dirname + '/wallpaper.png'
   },
   git: {
     settings: [
