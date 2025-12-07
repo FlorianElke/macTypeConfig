@@ -7,7 +7,6 @@ const config: Configuration = {
   brew: {
     packages: [
       'git',
-      'node',
       'claude-code',
       'zsh-syntax-highlighting',
       'mas',
