@@ -1,4 +1,4 @@
-import { Configuration } from 'mactype';
+import { Configuration } from '../../.local/macType';
 
 const config: Configuration = {
   brew: {
