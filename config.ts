@@ -39,6 +39,11 @@ const config: Configuration = {
         source: './configs/zshrc.ts',
         target: '~/.zshrc',
         backup: true
+      },
+      {
+        source: '.config/ssh_config.ts',
+        target: '~/.ssh/config',
+        backup: true
       }
     ]
   }
