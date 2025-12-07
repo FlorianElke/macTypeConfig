@@ -1,6 +1,4 @@
 
-# macType Generated .zshrc
-# This file is managed by macType - changes will be overwritten
 
 # Enable colors
 autoload -U colors && colors
@@ -34,6 +32,7 @@ fi
 # Custom configuration
 # Add your custom shell configuration here
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME -}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+export NVM_DIR="$([ -z "\${XDG_CONFIG_HOME -}" ] && printf %s "$\{HOME}/.nvm" || printf %s "$\{XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
 

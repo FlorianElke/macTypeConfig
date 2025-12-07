@@ -1,0 +1,14 @@
+{
+  "macos": {
+    "settings": [
+      {
+        "domain": "com.apple.AppleMultitouchTrackpad",
+        "key": "TapToClick"
+      },
+      {
+        "domain": "com.apple.dock",
+        "key": "show-recents"
+      }
+    ]
+  }
+}

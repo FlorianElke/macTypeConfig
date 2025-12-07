@@ -1,4 +1,7 @@
-import { Configuration } from '../../.local/macType';
+import { Configuration } from '../../.local/macType/src/types';
+import { dockSetting, trackpadSetting } from '../../.local/macType/src/managers/macos-defaults';
+
+declare var __dirname: any;
 
 const config: Configuration = {
   brew: {
@@ -19,36 +22,40 @@ const config: Configuration = {
   appstore: {
     apps: [
       { id: 497714887, name: 'WebSSH' }
-
     ],
   },
 
   macos: {
     settings: [
-      {
-        domain: 'com.apple.dock',
-        key: 'autohide',
-        value: true,
-        type: 'bool',
-      }
+      trackpadSetting('TapToClick', true),
+      dockSetting('show-recents', false)
     ],
+    dockApps: [
+      { name: 'Visual Studio Code', position: 1 },
+      { name: 'Google Chrome' },
+      { name: '1Password' }
+    ],
+    wallpaper: __dirname + '/wallpaper.jpg'
+  },
+  git: {
+    settings: [
+      { scope: 'global', key: 'user.name', value: 'Florian Elke' },
+      { scope: 'global', key: 'user.email', value: 'flo@gentlent.com' },
+    ]
   },
 
-  files: {
-    files: [
-      {
-        source: './configs/zshrc.ts',
-        target: '~/.zshrc',
-        backup: true
-      },
-      {
-        source: '.config/ssh_config.ts',
-        target: '~/.ssh/config',
-        backup: true
-      }
-    ]
-  }
+  files: [
+    {
+      source: 'configs/zshrc',
+      target: '~/.zshrc',
+      backup: true
+    },
+    {
+      source: 'configs/ssh_config',
+      target: '~/.ssh/config',
+      backup: true
+    }
+  ]
 };
 
 export default config;
-
