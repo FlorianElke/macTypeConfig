@@ -11,7 +11,8 @@ const config: Configuration = {
     ],
     casks: [
       '1password',
-      'google-chrome'
+      'google-chrome',
+      'visual-studio-code'
     ],
   },
 
